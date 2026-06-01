@@ -1,0 +1,215 @@
+topics:
+  - day: 1
+    title: "Claudeって何？ChatGPTと何が違うの？"
+    keywords: ["Claude", "Anthropic", "ChatGPT", "AI入門"]
+    tone: "友達に話しかけるような親しみやすいトーン"
+    length: "1200-1500"
+    summary: "ClaudeはAnthropicが作ったAI。ChatGPTとの違いや特徴を初心者向けに紹介"
+
+  - day: 2
+    title: "Claudeを使い始めるには？アカウント作成から最初の一言まで"
+    keywords: ["Claude登録", "使い方", "入門", "はじめて"]
+    tone: "ステップバイステップで丁寧に"
+    length: "1200-1500"
+    summary: "claude.aiへの登録方法と、最初にどう話しかければいいかを解説"
+
+  - day: 3
+    title: "Claudeに何を頼めばいい？意外と知らない得意なこと5選"
+    keywords: ["Claude活用", "できること", "使い方", "活用法"]
+    tone: "発見や驚きを共有するトーン"
+    length: "1200-1500"
+    summary: "文章作成・要約・翻訳・コード・壁打ちなど、Claudeが特に得意なタスクを紹介"
+
+  - day: 4
+    title: "プロンプトって何？Claudeへの「お願いの仕方」入門"
+    keywords: ["プロンプト", "指示", "入門", "コツ"]
+    tone: "初心者目線で噛み砕いて"
+    length: "1300-1600"
+    summary: "プロンプトとは何か、なぜ書き方で結果が変わるのかを基礎から説明"
+
+  - day: 5
+    title: "Claudeに「もっとよく」答えてもらう3つのコツ"
+    keywords: ["プロンプト改善", "コツ", "精度アップ", "活用"]
+    tone: "Before/Afterで具体的に見せる"
+    length: "1300-1600"
+    summary: "具体的に・役割を与える・例を示す、の3つのコツをBefore/Afterで解説"
+
+  - day: 6
+    title: "Claudeに「キャラ」を与えると何が変わるか試してみた"
+    keywords: ["ロールプレイ", "役割設定", "システムプロンプト", "実験"]
+    tone: "実験レポート風で楽しく"
+    length: "1200-1500"
+    summary: "『あなたはプロの編集者です』のように役割を与えると回答がどう変わるか実験"
+
+  - day: 7
+    title: "一週間Claudeを使ってみた正直な感想"
+    keywords: ["レビュー", "感想", "初心者", "1週間"]
+    tone: "正直で等身大の体験談"
+    length: "1200-1500"
+    summary: "1週間使ってみてよかったこと・困ったことをリアルに振り返る"
+
+  - day: 8
+    title: "ClaudeのプランはどれがいいのかFree・Pro・Maxを比較"
+    keywords: ["料金", "プラン", "Pro", "Max", "比較"]
+    tone: "損しないための実用的なアドバイス"
+    length: "1300-1600"
+    summary: "各プランの違いを整理して、どんな人にどのプランが向いているか解説"
+
+  - day: 9
+    title: "Claudeで議事録を自動作成してみたら想像以上だった"
+    keywords: ["議事録", "自動化", "業務効率", "活用例"]
+    tone: "驚きと実用性を伝えるトーン"
+    length: "1300-1600"
+    summary: "会議メモをClaudeに渡して議事録化する実践例を紹介"
+
+  - day: 10
+    title: "Claudeに文章を添削してもらうと何が変わるか"
+    keywords: ["文章添削", "ライティング", "改善", "活用"]
+    tone: "Before/Afterで変化を見せる"
+    length: "1200-1500"
+    summary: "自分の書いた文章をClaudeに添削してもらい、どう改善されるか実例で紹介"
+
+  - day: 11
+    title: "Claudeとの「会話の続け方」が実は超重要だった"
+    keywords: ["会話", "コンテキスト", "チャット", "コツ"]
+    tone: "気づきを共有するトーン"
+    length: "1200-1500"
+    summary: "一問一答より会話を続けることで精度が上がる仕組みを解説"
+
+  - day: 12
+    title: "ClaudeにPDFや画像を読み込ませてみた"
+    keywords: ["ファイル", "PDF", "画像", "マルチモーダル"]
+    tone: "実験・発見を共有する感じで"
+    length: "1300-1600"
+    summary: "ファイルのアップロード機能を使った活用例を実際に試して紹介"
+
+  - day: 13
+    title: "Claudeを使って英語学習を効率化する方法"
+    keywords: ["英語学習", "翻訳", "英作文", "活用"]
+    tone: "英語が苦手な人に寄り添うトーン"
+    length: "1300-1600"
+    summary: "英文添削・翻訳・リーディング練習など、英語学習でのClaude活用法"
+
+  - day: 14
+    title: "2週間使って気づいた、Claudeが苦手なこと"
+    keywords: ["苦手", "限界", "注意点", "正直レビュー"]
+    tone: "正直で等身大、批判的思考も忘れずに"
+    length: "1200-1500"
+    summary: "最新情報・計算・ハルシネーションなど、Claudeの限界と注意点を正直に"
+
+  - day: 15
+    title: "Claude APIって何？使うと何ができるようになるの？"
+    keywords: ["API", "入門", "開発", "自動化"]
+    tone: "非エンジニアにもわかる言葉で"
+    length: "1300-1600"
+    summary: "APIとは何か、使えるようになると何が変わるかを初心者向けに解説"
+
+  - day: 16
+    title: "AnthropicのConsoleに登録してAPIキーを取得してみた"
+    keywords: ["Anthropic Console", "APIキー", "登録", "手順"]
+    tone: "ステップバイステップで丁寧に"
+    length: "1300-1600"
+    summary: "Console登録からAPIキー発行までの手順を画面イメージとともに解説"
+
+  - day: 17
+    title: "Pythonがなくても大丈夫？Claude APIの最初の一歩"
+    keywords: ["API", "Python", "入門", "はじめて"]
+    tone: "プログラミング未経験者に寄り添う"
+    length: "1300-1600"
+    summary: "簡単なAPIの呼び出しを体験して、自動化の入口に立つ"
+
+  - day: 18
+    title: "Claude Code って何が便利なの？ターミナル版Claudeを触ってみた"
+    keywords: ["Claude Code", "CLI", "開発ツール", "入門"]
+    tone: "初めて触れる人目線で率直に"
+    length: "1300-1600"
+    summary: "Claude Codeのインストールから基本操作まで、初心者目線でレポート"
+
+  - day: 19
+    title: "Claude CodeのRoutinesで何かを自動化してみる"
+    keywords: ["Routines", "自動化", "スケジュール", "Claude Code"]
+    tone: "実験・挑戦レポート風"
+    length: "1400-1700"
+    summary: "/scheduleを使って定期実行タスクを設定する体験をレポート"
+
+  - day: 20
+    title: "Claudeを使ったnote記事の書き方ワークフロー"
+    keywords: ["note", "記事作成", "ワークフロー", "活用"]
+    tone: "実用的でそのまま使えるノウハウ"
+    length: "1300-1600"
+    summary: "テーマ決め→構成→執筆→推敲、各フェーズでClaudeをどう使うか"
+
+  - day: 21
+    title: "プロンプトエンジニアリングって何？3週間で学んだこと"
+    keywords: ["プロンプトエンジニアリング", "まとめ", "学習", "スキル"]
+    tone: "学習の振り返りを共有するトーン"
+    length: "1400-1700"
+    summary: "プロンプトエンジニアリングの基本概念を3週間の学びとともに整理"
+
+  - day: 22
+    title: "Claudeでコードを書いてもらった話（プログラミング未経験者が）"
+    keywords: ["コード生成", "プログラミング", "非エンジニア", "体験"]
+    tone: "初心者の等身大な挑戦記"
+    length: "1300-1600"
+    summary: "プログラミング経験なしでClaudeにコードを書かせて動かすまでの体験"
+
+  - day: 23
+    title: "ClaudeとChatGPTとGemini、結局どれが自分に合う？"
+    keywords: ["比較", "ChatGPT", "Gemini", "選び方"]
+    tone: "フラットで実用的な比較"
+    length: "1400-1700"
+    summary: "3つのAIを実際に使い比べて、用途別のおすすめをまとめる"
+
+  - day: 24
+    title: "Claudeに自分の文体を学習させる方法を試してみた"
+    keywords: ["文体", "カスタマイズ", "Few-shot", "プロンプト"]
+    tone: "実験レポート風"
+    length: "1300-1600"
+    summary: "自分の過去文章を例として渡し、文体を真似させるFew-shotプロンプトを実験"
+
+  - day: 25
+    title: "Claudeを仕事で使うとき気をつけたい情報セキュリティの話"
+    keywords: ["セキュリティ", "個人情報", "業務利用", "注意点"]
+    tone: "真面目だけど難しくなりすぎない"
+    length: "1300-1600"
+    summary: "機密情報・個人情報の扱い、企業利用時の注意点を分かりやすく解説"
+
+  - day: 26
+    title: "ClaudeのMCPって何？AIが外部ツールとつながる仕組み"
+    keywords: ["MCP", "連携", "ツール", "拡張"]
+    tone: "難しい概念をやさしく"
+    length: "1400-1700"
+    summary: "MCPの概念と、SlackやGoogleカレンダーと連携できる意味を初心者向けに解説"
+
+  - day: 27
+    title: "Claudeで副業・仕事の生産性を上げた実例5つ"
+    keywords: ["生産性", "副業", "仕事効率化", "実例"]
+    tone: "具体的でそのまま真似できる内容"
+    length: "1400-1700"
+    summary: "メール・資料作成・リサーチ・翻訳・アイデア出しの実例を5つ紹介"
+
+  - day: 28
+    title: "1ヶ月Claudeを毎日使って生活はどう変わったか"
+    keywords: ["1ヶ月", "振り返り", "生活変化", "体験談"]
+    tone: "正直で等身大の振り返り"
+    length: "1400-1700"
+    summary: "1ヶ月間の学習・活用を振り返り、生活や仕事への影響をリアルに報告"
+
+  - day: 29
+    title: "これからClaudeを学ぶ人へ伝えたいこと"
+    keywords: ["まとめ", "アドバイス", "初心者へ", "学び方"]
+    tone: "先輩から後輩へ語りかけるような温かいトーン"
+    length: "1200-1500"
+    summary: "1ヶ月の経験から、これから始める人に伝えたいことをまとめる"
+
+  - day: 30
+    title: "Claude活用、次のステップへ。中級者になるためにやること"
+    keywords: ["次のステップ", "中級", "スキルアップ", "ロードマップ"]
+    tone: "前向きで背中を押すトーン"
+    length: "1300-1600"
+    summary: "API・Claude Code・自動化など、基礎を超えた次のステップを提示"
+
+schedule:
+  time: "08:00"
+  timezone: "Asia/Tokyo"
+  rotation: sequential  # day番号順に実行
