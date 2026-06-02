@@ -50,16 +50,16 @@ def create_thumbnail(day: int, title: str, output_path: str):
     # --- Day番号（右エリア上部） ---
     font_day = _get_font(52, bold=True)
     day_text = f"Day {day:02d}"
-    draw.text((800, 160), day_text, font=font_day,
+    draw.text((800, 130), day_text, font=font_day,
               fill=COLOR_WHITE, anchor="mm")
 
     # Day番号の下にアンダーライン
-    draw.rectangle([(640, 192), (960, 197)], fill=COLOR_WHITE)
+    draw.rectangle([(640, 162), (960, 167)], fill=COLOR_WHITE)
 
-    # --- タイトル（右エリア中央） ---
-    font_title = _get_font(54, bold=True)
+    # --- タイトル（右エリア中央、Day番号と重ならない y=190〜620 の中央） ---
+    font_title = _get_font(52, bold=True)
     _draw_wrapped_text(draw, title, font_title, COLOR_WHITE,
-                       x=800, y=320, max_width=580, line_height=68)
+                       x=800, y=405, max_width=560, line_height=72)
 
     # --- 保存 ---
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
@@ -167,15 +167,19 @@ def _get_font(size: int, bold: bool = False):
 
 
 def _draw_wrapped_text(draw, text, font, color, x, y, max_width, line_height):
-    """テキストを折り返して描画する"""
-    # 文字数ベースで折り返し（日本語対応）
-    chars_per_line = max(1, max_width // (font.size if hasattr(font, 'size') else 40))
+    """テキストを実際のピクセル幅で計測しながら折り返して描画する"""
     lines = []
-    while len(text) > chars_per_line:
-        lines.append(text[:chars_per_line])
-        text = text[chars_per_line:]
-    if text:
-        lines.append(text)
+    current = ""
+    for char in text:
+        test = current + char
+        bbox = draw.textbbox((0, 0), test, font=font)
+        if bbox[2] - bbox[0] > max_width and current:
+            lines.append(current)
+            current = char
+        else:
+            current = test
+    if current:
+        lines.append(current)
 
     total_h = len(lines) * line_height
     start_y = y - total_h // 2
