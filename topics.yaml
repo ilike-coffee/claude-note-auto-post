@@ -1,5 +1,15 @@
 current_day: 3
 
+# note.comで毎記事に必ず付けるベースタグ（バズりやすいもの）
+base_tags:
+  - "#生成AI"
+  - "#Claude"
+  - "#AI活用"
+  - "#仕事効率化"
+  - "#初心者"
+  - "#AIツール"
+  - "#毎日note"
+
 topics:
   - day: 1
     title: "Claudeって何？ChatGPTと何が違うの？"
