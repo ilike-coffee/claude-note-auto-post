@@ -57,9 +57,9 @@ def create_thumbnail(day: int, title: str, output_path: str):
     draw.rectangle([(640, 162), (960, 167)], fill=COLOR_WHITE)
 
     # --- タイトル（右エリア中央、Day番号と重ならない y=190〜620 の中央） ---
-    font_title = _get_font(52, bold=True)
+    font_title, line_h = _fit_font_for_title(draw, title, max_width=560, max_size=52)
     _draw_wrapped_text(draw, title, font_title, COLOR_WHITE,
-                       x=800, y=405, max_width=560, line_height=72)
+                       x=800, y=405, max_width=560, line_height=line_h)
 
     # --- 保存 ---
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
@@ -166,12 +166,26 @@ def _get_font(size: int, bold: bool = False):
     return ImageFont.load_default()
 
 
+def _fit_font_for_title(draw, text, max_width, max_size=52):
+    """各行が max_width に収まる最大フォントサイズとline_heightを返す"""
+    segments = text.split("\n") if "\n" in text else [text]
+    for size in range(max_size, 19, -2):
+        font = _get_font(size, bold=True)
+        widths = [draw.textbbox((0, 0), seg, font=font)[2] for seg in segments]
+        if max(widths) <= max_width:
+            return font, int(size * 1.38)
+    font = _get_font(20, bold=True)
+    return font, int(20 * 1.38)
+
+
 def _draw_wrapped_text(draw, text, font, color, x, y, max_width, line_height):
-    """テキストを実際のピクセル幅で計測しながら折り返して描画する。\n で強制改行も可能"""
-    lines = []
-    for segment in text.split("\n"):
+    """テキストを描画する。\n は強制改行（それ以上の折り返しなし）、なければ自動折り返し"""
+    if "\n" in text:
+        lines = text.split("\n")
+    else:
+        lines = []
         current = ""
-        for char in segment:
+        for char in text:
             test = current + char
             bbox = draw.textbbox((0, 0), test, font=font)
             if bbox[2] - bbox[0] > max_width and current:
