@@ -167,19 +167,20 @@ def _get_font(size: int, bold: bool = False):
 
 
 def _draw_wrapped_text(draw, text, font, color, x, y, max_width, line_height):
-    """テキストを実際のピクセル幅で計測しながら折り返して描画する"""
+    """テキストを実際のピクセル幅で計測しながら折り返して描画する。\n で強制改行も可能"""
     lines = []
-    current = ""
-    for char in text:
-        test = current + char
-        bbox = draw.textbbox((0, 0), test, font=font)
-        if bbox[2] - bbox[0] > max_width and current:
+    for segment in text.split("\n"):
+        current = ""
+        for char in segment:
+            test = current + char
+            bbox = draw.textbbox((0, 0), test, font=font)
+            if bbox[2] - bbox[0] > max_width and current:
+                lines.append(current)
+                current = char
+            else:
+                current = test
+        if current:
             lines.append(current)
-            current = char
-        else:
-            current = test
-    if current:
-        lines.append(current)
 
     total_h = len(lines) * line_height
     start_y = y - total_h // 2
