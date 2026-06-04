@@ -57,8 +57,9 @@ def create_thumbnail(day: int, title: str, output_path: str):
     draw.rectangle([(640, 162), (960, 167)], fill=COLOR_WHITE)
 
     # --- タイトル（右エリア中央、Day番号と重ならない y=190〜620 の中央） ---
-    font_title, line_h = _fit_font_for_title(draw, title, max_width=560, max_size=52)
-    _draw_wrapped_text(draw, title, font_title, COLOR_WHITE,
+    display_title = _auto_break_title(title)
+    font_title, line_h = _fit_font_for_title(draw, display_title, max_width=560, max_size=52)
+    _draw_wrapped_text(draw, display_title, font_title, COLOR_WHITE,
                        x=800, y=405, max_width=560, line_height=line_h)
 
     # --- 保存 ---
@@ -166,6 +167,16 @@ def _get_font(size: int, bold: bool = False):
     return ImageFont.load_default()
 
 
+def _auto_break_title(title: str) -> str:
+    """？。！の直後で最初の1回だけ改行を挿入する（既に\nがあればそのまま）"""
+    if "\n" in title:
+        return title
+    for i, ch in enumerate(title):
+        if ch in "？。！" and i < len(title) - 1:
+            return title[:i + 1] + "\n" + title[i + 1:]
+    return title
+
+
 def _fit_font_for_title(draw, text, max_width, max_size=52):
     """各行が max_width に収まる最大フォントサイズとline_heightを返す"""
     segments = text.split("\n") if "\n" in text else [text]
@@ -179,20 +190,29 @@ def _fit_font_for_title(draw, text, max_width, max_size=52):
 
 
 def _draw_wrapped_text(draw, text, font, color, x, y, max_width, line_height):
-    """テキストを描画する。\n は強制改行（それ以上の折り返しなし）、なければ自動折り返し"""
+    """テキストを描画する。\n は強制改行、なければ？。！優先の自動折り返し"""
     if "\n" in text:
         lines = text.split("\n")
     else:
+        BREAK_CHARS = set("？。！")
         lines = []
         current = ""
+        last_break_idx = -1
         for char in text:
             test = current + char
             bbox = draw.textbbox((0, 0), test, font=font)
-            if bbox[2] - bbox[0] > max_width and current:
-                lines.append(current)
-                current = char
-            else:
+            if char in BREAK_CHARS:
+                last_break_idx = len(current)
+            if bbox[2] - bbox[0] <= max_width:
                 current = test
+            else:
+                if last_break_idx > 0:
+                    lines.append(current[:last_break_idx + 1])
+                    current = current[last_break_idx + 1:] + char
+                    last_break_idx = -1
+                elif current:
+                    lines.append(current)
+                    current = char
         if current:
             lines.append(current)
 
