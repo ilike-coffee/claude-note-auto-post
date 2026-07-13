@@ -221,6 +221,206 @@ topics:
     length: "1300-1600"
     summary: "API・Claude Code・自動化など、基礎を超えた次のステップを提示"
 
+  - day: 31
+    tier: "中級"
+    title: "Projectsって何？チャットとは違う「まとめる」機能"
+    keywords: ["Projects", "プロジェクト機能", "中級", "整理"]
+    tone: "新機能を紹介するワクワク感で"
+    length: "1400-1700"
+    summary: "単発チャットとProjectsの違い、何のためにある機能かを実例で紹介"
+    is_paid: false
+    price: null
+
+  - day: 32
+    tier: "中級"
+    title: "Projectsにファイルを入れてナレッジベースを作ってみた"
+    keywords: ["ナレッジベース", "ファイル管理", "Projects", "活用"]
+    tone: "実験・発見を共有する感じで"
+    length: "1400-1700"
+    summary: "資料や過去のやり取りをProjectsに集約し、自分専用の知識源にする方法"
+    is_paid: false
+    price: null
+
+  - day: 33
+    tier: "中級"
+    title: "プロジェクトのカスタム指示で「専属アシスタント」を作る"
+    keywords: ["カスタム指示", "Projects", "パーソナライズ", "活用"]
+    tone: "具体的な設定例を見せながら"
+    length: "1400-1700"
+    summary: "プロジェクトごとにカスタム指示を設定し、用途特化のアシスタントを作る方法"
+    is_paid: false
+    price: null
+
+  - day: 34
+    tier: "中級"
+    title: "プロジェクトを一週間使ってみてわかった向き不向き"
+    keywords: ["Projects", "レビュー", "1週間", "使い分け"]
+    tone: "正直で等身大の振り返り"
+    length: "1300-1600"
+    summary: "Projectsが向くタスク・単発チャットのままでいいタスクを実体験から整理"
+    is_paid: false
+    price: null
+
+  - day: 35
+    tier: "中級"
+    title: "毎回同じ指示を書くのが面倒→カスタム指示に登録してみた"
+    keywords: ["カスタム指示", "効率化", "設定", "活用"]
+    tone: "あるある共感から入る"
+    length: "1300-1600"
+    summary: "毎回入力していた前置きをカスタム指示に登録し、手間を減らした体験"
+    is_paid: false
+    price: null
+
+  - day: 36
+    tier: "中級"
+    title: "よく使うプロンプトをテンプレ化してみた"
+    keywords: ["プロンプトテンプレート", "効率化", "ストック", "活用"]
+    tone: "実用的でそのまま使えるノウハウ"
+    length: "1400-1700"
+    summary: "議事録・要約・添削などよく使うプロンプトをテンプレとしてストックする方法"
+    is_paid: false
+    price: null
+
+  - day: 37
+    tier: "中級"
+    title: "定型業務をClaudeに任せる、を一歩進めてみる"
+    keywords: ["定型業務", "自動化", "業務効率化", "実践"]
+    tone: "実践レポート風"
+    length: "1400-1700"
+    summary: "単発の作業依頼から、複数ステップの定型業務を任せる工夫へ発展させる"
+    is_paid: false
+    price: null
+
+  - day: 38
+    tier: "中級"
+    title: "「毎日やること」をClaudeと一緒に仕組み化する"
+    keywords: ["ルーティン", "仕組み化", "習慣", "活用"]
+    tone: "気づきを共有するトーン"
+    length: "1400-1700"
+    summary: "日々のルーティン業務をClaudeとの対話パターンとして仕組み化した話"
+    is_paid: false
+    price: null
+
+  - day: 39
+    tier: "中級"
+    title: "ClaudeのWeb検索機能を使ってみた"
+    keywords: ["Web検索", "最新情報", "コネクタ", "活用"]
+    tone: "実験・発見を共有する感じで"
+    length: "1400-1700"
+    summary: "Web検索機能をオンにして、最新情報を踏まえた回答をもらう体験"
+    is_paid: false
+    price: null
+
+  - day: 40
+    tier: "中級"
+    title: "Googleカレンダーと連携させてみた"
+    keywords: ["Googleカレンダー", "コネクタ", "連携", "スケジュール管理"]
+    tone: "ステップバイステップで丁寧に"
+    length: "1400-1700"
+    summary: "Googleカレンダーのコネクタを設定し、予定確認や調整をClaudeに任せる方法"
+    is_paid: false
+    price: null
+
+  - day: 41
+    tier: "中級"
+    title: "Gmailと連携させてみた"
+    keywords: ["Gmail", "コネクタ", "連携", "メール処理"]
+    tone: "ステップバイステップで丁寧に"
+    length: "1400-1700"
+    summary: "Gmailのコネクタを設定し、メールの下書き作成や整理を任せてみた体験"
+    is_paid: false
+    price: null
+
+  - day: 42
+    tier: "中級"
+    title: "コネクタを組み合わせて「秘書」っぽく使ってみた"
+    keywords: ["コネクタ", "組み合わせ", "秘書化", "活用"]
+    tone: "実験レポート風で楽しく"
+    length: "1400-1700"
+    summary: "カレンダーとメールのコネクタを組み合わせ、秘書のように使ってみた実践例"
+    is_paid: false
+    price: null
+
+  - day: 43
+    tier: "中級"
+    title: "資料のたたき台をClaudeに作ってもらう"
+    keywords: ["資料作成", "たたき台", "ビジネス文書", "活用"]
+    tone: "実用的でそのまま使えるノウハウ"
+    length: "1400-1700"
+    summary: "企画書や提案資料の構成案・たたき台をClaudeに作らせるコツ"
+    is_paid: false
+    price: null
+
+  - day: 44
+    tier: "中級"
+    title: "簡単なデータをClaudeに分析してもらった"
+    keywords: ["データ分析", "簡易分析", "ビジネス", "活用"]
+    tone: "発見や驚きを共有するトーン"
+    length: "1400-1700"
+    summary: "アンケート結果や売上データなど簡単なデータをClaudeに読み込ませて分析させた話"
+    is_paid: false
+    price: null
+
+  - day: 45
+    tier: "中級"
+    title: "表計算とClaudeを組み合わせてみる"
+    keywords: ["表計算", "スプレッドシート", "連携", "活用"]
+    tone: "実践レポート風"
+    length: "1400-1700"
+    summary: "スプレッドシートのデータをClaudeに渡して集計・整形を手伝わせる方法"
+    is_paid: false
+    price: null
+
+  - day: 46
+    tier: "中級"
+    title: "会議前の準備をClaudeに手伝ってもらう"
+    keywords: ["会議準備", "業務効率化", "実例", "活用"]
+    tone: "具体的でそのまま真似できる内容"
+    length: "1400-1700"
+    summary: "アジェンダ作成や論点整理など、会議前の準備をClaudeと一緒に進める方法"
+    is_paid: false
+    price: null
+
+  - day: 47
+    tier: "中級"
+    title: "中級編を振り返って、変わったこと"
+    keywords: ["振り返り", "中級編", "まとめ", "変化"]
+    tone: "正直で等身大の振り返り"
+    length: "1300-1600"
+    summary: "中級編で学んだ機能を振り返り、初級編との違いや使い方の変化をまとめる"
+    is_paid: false
+    price: null
+
+  - day: 48
+    tier: "中級"
+    title: "Claude Codeってプロジェクト機能と何が違うの？"
+    keywords: ["Claude Code", "Projects", "違い", "比較"]
+    tone: "フラットで実用的な比較"
+    length: "1400-1700"
+    summary: "チャット上のProjectsとClaude Codeの役割の違いを初心者目線で整理"
+    is_paid: false
+    price: null
+
+  - day: 49
+    tier: "中級"
+    title: "Claude Codeで最初の一歩を踏み出してみる"
+    keywords: ["Claude Code", "入門", "開発", "挑戦"]
+    tone: "初めて触れる人目線で率直に"
+    length: "1400-1700"
+    summary: "Claude Codeを使って初めての簡単な作業を試した体験レポート"
+    is_paid: false
+    price: null
+
+  - day: 50
+    tier: "中級"
+    title: "次は「作る」側へ。上級編の入り口で"
+    keywords: ["上級編", "次のステップ", "開発", "予告"]
+    tone: "前向きで背中を押すトーン"
+    length: "1300-1600"
+    summary: "中級編のまとめと、開発・自動化を扱う上級編への橋渡し"
+    is_paid: false
+    price: null
+
 schedule:
   time: "08:00"
   timezone: "Asia/Tokyo"
