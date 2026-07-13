@@ -421,6 +421,206 @@ topics:
     is_paid: false
     price: null
 
+  - day: 51
+    tier: "上級"
+    title: "Claude Codeで小さなツールを作ってみる"
+    keywords: ["Claude Code", "開発", "実践", "上級"]
+    tone: "実践レポート風、手を動かした過程を丁寧に"
+    length: "1600-2000"
+    summary: "Claude Codeで簡単なツールを実際に一つ作り上げるまでの過程を解説"
+    is_paid: true
+    price: 380
+
+  - day: 52
+    tier: "上級"
+    title: "サブエージェントって何？役割分担させてみた"
+    keywords: ["サブエージェント", "Claude Code", "役割分担", "実践"]
+    tone: "実験・発見を共有する感じで"
+    length: "1600-2000"
+    summary: "サブエージェント機能を使い、タスクを役割ごとに分担させた実践例"
+    is_paid: true
+    price: 380
+
+  - day: 53
+    tier: "上級"
+    title: "スキルを自作して、いつもの作業を型にする"
+    keywords: ["スキル", "自作", "Claude Code", "型化"]
+    tone: "具体的な手順を見せながら"
+    length: "1600-2000"
+    summary: "繰り返し行う作業をスキルとして自作し、再利用できる形にする方法"
+    is_paid: true
+    price: 380
+
+  - day: 54
+    tier: "上級"
+    title: "エラーが出たときClaudeとどう向き合うか"
+    keywords: ["デバッグ", "エラー対応", "Claude Code", "実践"]
+    tone: "正直な試行錯誤を見せる"
+    length: "1600-2000"
+    summary: "開発中に出たエラーをClaudeと一緒に切り分けて解決した実例"
+    is_paid: true
+    price: 380
+
+  - day: 55
+    tier: "上級"
+    title: "一週間開発してみてわかったこと"
+    keywords: ["開発", "1週間", "振り返り", "上級"]
+    tone: "正直で等身大の振り返り"
+    length: "1500-1800"
+    summary: "Claude Codeで一週間開発してみて感じた向き不向きや学びを振り返る"
+    is_paid: true
+    price: 380
+
+  - day: 56
+    tier: "上級"
+    title: "このnote自動化システム、実は自分で作った"
+    keywords: ["自動化", "自作", "note", "公開"]
+    tone: "種明かしをするような楽しいトーン"
+    length: "1600-2000"
+    summary: "本シリーズの記事・サムネイル自動生成システム自体の全体像を公開する"
+    is_paid: true
+    price: 380
+
+  - day: 57
+    tier: "上級"
+    title: "スケジュールタスクを設計するときに考えたこと"
+    keywords: ["スケジュールタスク", "設計", "自動化", "実践"]
+    tone: "設計判断の理由を丁寧に説明する"
+    length: "1600-2000"
+    summary: "定期実行タスクを組む上で考えた設計上の判断ポイントを解説"
+    is_paid: true
+    price: 380
+
+  - day: 58
+    tier: "上級"
+    title: "記事とサムネイルを自動生成する仕組みを解説する"
+    keywords: ["自動生成", "画像処理", "仕組み", "解説"]
+    tone: "技術解説を噛み砕いて"
+    length: "1700-2000"
+    summary: "記事執筆とサムネイル画像生成を自動化する仕組みの中身を具体的に解説"
+    is_paid: true
+    price: 380
+
+  - day: 59
+    tier: "上級"
+    title: "自動化システムのハマりどころと直し方"
+    keywords: ["トラブルシューティング", "自動化", "実例", "対処法"]
+    tone: "失敗談を正直に共有する"
+    length: "1600-2000"
+    summary: "自動化を組む中で実際にハマった問題とその直し方を具体例で紹介"
+    is_paid: true
+    price: 380
+
+  - day: 60
+    tier: "上級"
+    title: "自動化を仕組み化してわかった「任せる」ということ"
+    keywords: ["自動化", "振り返り", "仕組み化", "気づき"]
+    tone: "気づきを共有するトーン"
+    length: "1500-1800"
+    summary: "自動化を作る過程で得た「何を任せ、何を自分で見るか」の判断軸を振り返る"
+    is_paid: true
+    price: 380
+
+  - day: 61
+    tier: "上級"
+    title: "MCPサーバーって自分で作れるの？"
+    keywords: ["MCP", "サーバー自作", "拡張", "入門"]
+    tone: "疑問から入って解き明かすトーン"
+    length: "1600-2000"
+    summary: "MCPサーバーを自作する際に必要な考え方の基礎を解説"
+    is_paid: true
+    price: 380
+
+  - day: 62
+    tier: "上級"
+    title: "簡単なMCPサーバーを作ってみた"
+    keywords: ["MCP", "サーバー自作", "実践", "上級"]
+    tone: "実践レポート風、手を動かした過程を丁寧に"
+    length: "1700-2000"
+    summary: "実際に簡単なMCPサーバーを一つ作り上げる過程を実況形式で紹介"
+    is_paid: true
+    price: 380
+
+  - day: 63
+    tier: "上級"
+    title: "独自コネクタを設計するときの考え方"
+    keywords: ["コネクタ", "設計", "MCP", "実践"]
+    tone: "設計判断の理由を丁寧に説明する"
+    length: "1600-2000"
+    summary: "独自コネクタを設計する際に考慮すべきポイントを整理して解説"
+    is_paid: true
+    price: 380
+
+  - day: 64
+    tier: "上級"
+    title: "外部ツールとClaudeをつなぐときの注意点"
+    keywords: ["外部連携", "注意点", "セキュリティ", "実践"]
+    tone: "真面目だけど難しくなりすぎない"
+    length: "1600-2000"
+    summary: "外部ツールとの連携で気をつけたい権限管理やセキュリティ上の注意点"
+    is_paid: true
+    price: 380
+
+  - day: 65
+    tier: "上級"
+    title: "MCPを作ってみて感じた可能性と限界"
+    keywords: ["MCP", "振り返り", "可能性", "限界"]
+    tone: "正直で等身大の振り返り"
+    length: "1500-1800"
+    summary: "MCPサーバーを作ってみた経験から見えた可能性と、現状の限界を整理"
+    is_paid: true
+    price: 380
+
+  - day: 66
+    tier: "上級"
+    title: "Claudeで副業を始めてみた話"
+    keywords: ["副業", "収益化", "実例", "体験談"]
+    tone: "正直で等身大の体験談"
+    length: "1600-2000"
+    summary: "Claudeを活用して副業を始めた実体験と、そこで得た学びを共有する"
+    is_paid: true
+    price: 380
+
+  - day: 67
+    tier: "上級"
+    title: "仕事にClaudeを本格導入するときの進め方"
+    keywords: ["業務導入", "本格活用", "進め方", "実例"]
+    tone: "実用的でそのまま使えるノウハウ"
+    length: "1600-2000"
+    summary: "個人利用から仕事での本格導入へ移行する際の進め方を実例で紹介"
+    is_paid: true
+    price: 380
+
+  - day: 68
+    tier: "上級"
+    title: "チームにClaudeを広めるときにぶつかった壁"
+    keywords: ["チーム展開", "導入", "課題", "実例"]
+    tone: "正直な試行錯誤を見せる"
+    length: "1600-2000"
+    summary: "チームや周囲にClaude活用を広める際に直面した課題とその乗り越え方"
+    is_paid: true
+    price: 380
+
+  - day: 69
+    tier: "上級"
+    title: "有料記事を書くようになって変わったこと"
+    keywords: ["有料化", "note", "マネタイズ", "振り返り"]
+    tone: "正直で等身大の振り返り"
+    length: "1500-1800"
+    summary: "記事を有料化してから執筆スタンスや読者との関係がどう変わったかを共有"
+    is_paid: true
+    price: 380
+
+  - day: 70
+    tier: "上級"
+    title: "上級編、ここまでの振り返りとこれから"
+    keywords: ["振り返り", "上級編", "まとめ", "今後"]
+    tone: "前向きで背中を押すトーン"
+    length: "1500-1800"
+    summary: "上級編前半の振り返りと、この先扱っていきたいテーマの予告"
+    is_paid: true
+    price: 380
+
 schedule:
   time: "08:00"
   timezone: "Asia/Tokyo"
