@@ -11,8 +11,32 @@ try:
     from PIL import Image, ImageDraw, ImageFont
 except ImportError:
     print("Pillowをインストールします...")
+    # 固定文字列のみでユーザー入力を含まないためコマンドインジェクションのリスクなし
     os.system("pip install Pillow --break-system-packages")
     from PIL import Image, ImageDraw, ImageFont
+
+import yaml
+
+PALETTES = {
+    "初級": {"main": "#E8630A", "accent": "#F5A623", "dark": "#C44D00"},
+    "中級": {"main": "#1E5FA8", "accent": "#4FA8D8", "dark": "#123F73"},
+    "上級": {"main": "#4B2E83", "accent": "#7A5AC2", "dark": "#2E1B54"},
+}
+
+
+def _load_topics_data() -> dict:
+    """generate_thumbnail.pyと同じディレクトリのtopics.yamlを読み込む"""
+    topics_path = Path(__file__).parent / "topics.yaml"
+    with open(topics_path, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+
+def _resolve_tier(topics_data: dict, day: int) -> str:
+    """topics_dataからdayに対応するtierを返す。見つからなければ"初級" """
+    for topic in topics_data.get("topics", []):
+        if topic.get("day") == day:
+            return topic.get("tier", "初級")
+    return "初級"
 
 
 def create_thumbnail(day: int, title: str, output_path: str):
@@ -24,11 +48,13 @@ def create_thumbnail(day: int, title: str, output_path: str):
 
     W, H = 1280, 670
 
-    # ベースカラー
-    COLOR_BG_MAIN   = "#E8630A"   # メインオレンジ
-    COLOR_BG_ACCENT = "#F5A623"   # アクセントオレンジ
+    # tierに応じた配色を解決
+    tier = _resolve_tier(_load_topics_data(), day)
+    palette = PALETTES.get(tier, PALETTES["初級"])
+    COLOR_BG_MAIN   = palette["main"]
+    COLOR_BG_ACCENT = palette["accent"]
     COLOR_WHITE     = "#FFFFFF"
-    COLOR_DARK      = "#C44D00"   # 影・装飾用
+    COLOR_DARK      = palette["dark"]
 
     img  = Image.new("RGB", (W, H), COLOR_BG_MAIN)
     draw = ImageDraw.Draw(img)
@@ -40,7 +66,7 @@ def create_thumbnail(day: int, title: str, output_path: str):
     draw.ellipse([(-80, -80), (200, 200)], fill=COLOR_DARK)
 
     # --- ロボットアイコン（左エリア） ---
-    _draw_robot(draw, cx=220, cy=340, size=180, color=COLOR_WHITE)
+    _draw_robot(draw, cx=220, cy=340, size=180, color=COLOR_WHITE, face_color=COLOR_BG_MAIN)
 
     # --- 「Claude素人」テキスト（ロボット下） ---
     font_small = _get_font(28)
@@ -68,7 +94,7 @@ def create_thumbnail(day: int, title: str, output_path: str):
     print(f"✅ サムネイル生成: {output_path}")
 
 
-def _draw_robot(draw, cx, cy, size, color):
+def _draw_robot(draw, cx, cy, size, color, face_color):
     """シンプルなロボットを描画する"""
     s = size
 
@@ -86,19 +112,19 @@ def _draw_robot(draw, cx, cy, size, color):
     draw.ellipse([
         (cx - s * 0.22, cy - s * 0.45),
         (cx - s * 0.08, cy - s * 0.31)
-    ], fill="#E8630A")
+    ], fill=face_color)
 
     # 目（右）
     draw.ellipse([
         (cx + s * 0.08, cy - s * 0.45),
         (cx + s * 0.22, cy - s * 0.31)
-    ], fill="#E8630A")
+    ], fill=face_color)
 
     # 口
     draw.rounded_rectangle([
         (cx - s * 0.18, cy - s * 0.22),
         (cx + s * 0.18, cy - s * 0.14)
-    ], radius=s * 0.04, fill="#E8630A")
+    ], radius=s * 0.04, fill=face_color)
 
     # アンテナ
     draw.rectangle([
